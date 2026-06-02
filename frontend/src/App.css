@@ -1,0 +1,177 @@
+.aethel-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background: var(--bg-color);
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.brutalist-header {
+  background: #000;
+  color: var(--accent-color);
+  padding: 0.5rem 1rem;
+  font-weight: 900;
+  font-size: 1.2rem;
+  border-bottom: var(--border-width) solid var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.thought-stream {
+  width: 300px;
+  background: #111;
+  border: var(--border-width) solid var(--accent-color);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0px var(--accent-color);
+}
+
+.thought-list {
+  flex: 1;
+  padding: 1rem;
+  font-family: var(--font-mono);
+  color: var(--accent-color);
+  font-size: 0.9rem;
+  overflow-y: auto;
+}
+
+.thought-item {
+  margin-bottom: 0.5rem;
+  animation: flicker 0.2s infinite alternate;
+}
+
+@keyframes flicker {
+  from { opacity: 0.8; }
+  to { opacity: 1; }
+}
+
+.performance-hud {
+  padding: 1rem;
+  border-top: var(--border-width) solid var(--accent-color);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent-color);
+}
+
+.chat-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: var(--border-width) solid #000;
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0px #000;
+}
+
+.main-header {
+  background: #000;
+  color: #fff;
+  border-bottom: var(--border-width) solid #000;
+}
+
+.message-list {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.message-card {
+  padding: 1.5rem;
+  border: var(--border-width) solid #000;
+  position: relative;
+  max-width: 80%;
+}
+
+.message-card.user {
+  align-self: flex-end;
+  background: #eee;
+  box-shadow: 6px 6px 0px #000;
+}
+
+.message-card.aethel {
+  align-self: flex-start;
+  background: var(--accent-color);
+  box-shadow: -6px 6px 0px #000;
+}
+
+.role-tag {
+  position: absolute;
+  top: -12px;
+  left: 10px;
+  background: #000;
+  color: #fff;
+  padding: 2px 8px;
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+.input-container {
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  border-top: var(--border-width) solid #000;
+}
+
+.neo-input {
+  flex: 1;
+}
+
+.welcome-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.welcome-message h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  letter-spacing: -2px;
+  background: #000;
+  color: var(--accent-color);
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 10px 10px 0px #000;
+}
+
+.welcome-message p {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  max-width: 400px;
+}
+
+.processing-indicator {
+  font-family: var(--font-mono);
+  font-weight: 800;
+  color: #888;
+  margin-top: 1rem;
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  from { opacity: 0.5; }
+  to { opacity: 1; }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border: 3px solid #000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00cc00;
+}
