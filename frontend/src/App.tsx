@@ -65,23 +65,23 @@ function App() {
         <div className="performance-hud">
           <div>LATENCY: {latency}ms</div>
           <div>STATUS: {isProcessing ? 'PROCESSING' : 'READY'}</div>
-          <div style={{ marginTop: '0.5rem', fontSize: '0.7rem', color: '#666' }}>AETHEL_CORE_V1.0</div>
+          <div style={{ marginTop: '0.5rem', fontSize: '0.7rem', color: 'var(--text-secondary)' }}>AETHEL_CORE_V1.0</div>
         </div>
       </aside>
 
       {/* Main Chat Area */}
       <main className="chat-area">
-        <header className="brutalist-header main-header">AETHEL_PRIME</header>
+        <header className="brutalist-header main-header">AETHEL</header>
         <div className="message-list">
           {messages.length === 0 && (
             <div className="welcome-message">
-              <h1>AETHEL_ONLINE</h1>
+              <h1>AETHEL</h1>
               <p>The next evolution of AI is here. Command Aethel below.</p>
             </div>
           )}
           {messages.map((m, i) => (
             <div key={i} className={`message-card ${m.role}`}>
-              <span className="role-tag">{m.role.toUpperCase()}</span>
+              <span className="role-tag">{m.role === 'aethel' ? 'AETHEL' : m.role.toUpperCase()}</span>
               <p>{m.content}</p>
             </div>
           ))}
